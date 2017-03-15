@@ -31,6 +31,10 @@
 # Use vim keybindings
 #set -o vi
 
+# Set default editor to VIM
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # Add my shell scripts to the PATH
 export PATH=$HOME/scripts:$PATH
 
