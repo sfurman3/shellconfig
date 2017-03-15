@@ -4,8 +4,9 @@
     alias rm='rm -i'
     alias ln='ln -i'
 
+    # Colorize ls output
     # Write a slash (`/') after each filename if that file is a directory.
-    alias ls='ls -p'
+    alias ls='ls --color -p'
 
     # Alias 'vi' to the Vim installed by Homebrew and NOT the preinstalled
     # version
