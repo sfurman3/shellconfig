@@ -85,12 +85,69 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Use all aliases and environment variables defined in "~/.bash_profile"
-source ~/.bash_profile
+# Aliases
+    # -i (prompt before deleting etc.) option
+    alias mv='mv -i'
+    alias ln='ln -i'
+    alias rm='rm -i'
 
-# Alias CTRL + ARROWKEY to word navigation
-bindkey "^[[C" forward-word
-bindkey "^[[D" backward-word
+    # Write a slash (`/') after each filename if that file is a directory.
+    alias ls='ls -p'
 
-# Use $LS_COLORS for completion
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+    # Alias 'vi' to the Vim installed by Homebrew and NOT the preinstalled
+    # version
+    alias vi='vim'
+
+    # Color matches in grep output
+    alias grep='grep --color'
+
+    # Color differences in diff output
+    alias diff='colordiff'
+
+    # Do not print the introductory and copyright messages
+    alias gdb='gdb -q'
+
+    # Use vi-like and less-like key-bindings for navigating info documents
+    alias info='info --vi-keys'
+
+    # Add colors to 'tree'
+    alias tree='tree -C'
+
+    # Prevent octave from printing a message at startup
+    # Also prevent it from opening the gui
+    alias octave='octave -q --no-gui -W'
+
+# Keyboard shortcuts
+    # Alias CTRL + ARROWKEY to word navigation
+    bindkey "^[[C" forward-word
+    bindkey "^[[D" backward-word
+
+# Environment variables
+    # Add my shell scripts to the PATH
+    export PATH=$HOME/scripts:$PATH
+
+    # Add /usr/local/bin/git to the path
+    PATH=/usr/local/bin/git:$PATH
+
+    # Enable and set colors for the 'ls' command
+    export CLICOLOR=1
+    export LSCOLORS=gxfxcxdxbxegedabagacad
+
+    # Set the Linux LS_COLORS variable for use with the 'tree' command
+    export LS_COLORS="di=36:ln=35:so=32:pi=33:ex=31:bd=34;"
+    LS_COLORS+="46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
+
+    # Use $LS_COLORS for completion
+    zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+# Programming variables and configuration
+    # Settings for Go programming
+        # Set the GOPATH environment variable
+        # (specifies the location of your workspace for developing Go code)
+        export GOPATH=$HOME/go_workspace
+
+        # add the workspace's bin subdirectory to the PATH
+        PATH=$PATH:$GOPATH/bin
+
+    # OPAM configuration
+    . /Users/sethfurman/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
