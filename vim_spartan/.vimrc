@@ -6,6 +6,9 @@ filetype plugin indent on
 " (for some reason none of these are set by default in Vim 7.4
 set backspace=indent,eol,start
 
+" Set the default encoding to utf-8
+set encoding=utf-8
+
 " Set statusline always on
 set laststatus=2
 

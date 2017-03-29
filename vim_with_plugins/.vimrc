@@ -10,6 +10,9 @@ syntax on
         " (for some reason none of these are set by default in Vim 7.4)
         set backspace=indent,eol,start
 
+        " Set the default encoding to utf-8
+        set encoding=utf-8
+
         "Change the window-local current directory to be the same as the directory of
         "the current file.
         "NOTE: There is no easy way to test for this autocmd in a script like there
