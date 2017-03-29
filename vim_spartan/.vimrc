@@ -32,11 +32,11 @@ autocmd BufEnter * silent! lcd %:p:h
 
 "Keymappings for custom macros
     "Add Markdown-style 'dash' underline to a line of text
-kddPj^' @d = 'yyp:s/./-/g
+    let @d = 'yyp:s/./-/gkddPj^'
     "Add Markdown-style 'equal-sign' underline to a line of text
-kddPj^' @e = 'yyp:s/./=/g
+    let @e = 'yyp:s/./=/gkddPj^'
     "Remove whitespace from empty lines
-`a' let @w = 'ma:%s/^\s*$//g
+    let @w = 'ma:%s/^\s*$//g`a'
 
 "Hides buffers instead of closing them.
     "This means that you can have unwritten changes to a file and open a new
