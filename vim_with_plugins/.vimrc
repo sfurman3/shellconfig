@@ -28,11 +28,22 @@ syntax on
             let @w = 'ma:%s/^\s*$//g`a'
 
         "Programming formatting
+            "Default window size
+            set lines=45 columns=90
+            "Colored bar at the 80th column
+            set colorcolumn=80
             "Lines numbers
             set number
             set autoindent
-            "Syntax highlighting
+            "Syntax highlighting and colorscheme
             syntax enable
+                "Use limited colors for terminal (assuming you're not using
+                "the custom terminal colorscheme
+                let g:solarized_termcolors=256
+            let g:solarized_contrast='normal'
+            set background=dark
+            colorscheme solarized
+            hi MatchParen cterm=bold ctermbg=none ctermfg=172
             set tabstop=8
             "Convert tabs to spaces
             set expandtab
@@ -50,7 +61,6 @@ syntax on
 
             "Colored bar at the 80th column (with the given color)
             set colorcolumn=80
-            highlight ColorColumn ctermbg=0 guibg=lightgrey
 
             "Set the default window size
             "set lines=45 columns=90
@@ -65,9 +75,6 @@ syntax on
             set complete+=k
 
         " statusline settings
-                " Set the color of the statusline
-                highlight Statusline ctermbg=0 ctermfg=0
-
                 " Set statusline always on
                 set laststatus=2
 
