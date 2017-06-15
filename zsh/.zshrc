@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/sethfurman/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -150,4 +150,4 @@ fi
         PATH=$PATH:$GOPATH/bin
 
     # OPAM configuration
-    . /Users/sethfurman/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+    . $HOME/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
