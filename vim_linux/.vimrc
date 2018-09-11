@@ -12,6 +12,7 @@ set background=dark     "background color
 
 if !has('gui_running')
     let g:solarized_termcolors=256
+    set t_Co=256
 endif
 colorscheme solarized
 
@@ -94,9 +95,12 @@ set complete+=k
 "******************************************************************************
 nmap @s = :SyntasticToggleMode<CR>
 
-let @d = 'yyp:s/./-/gkddPj^' "underline with dashes
-let @e = 'yyp:s/./=/gkddPj^' "underline with equals signs
-let @w = 'ma:%s/^\s*$//g`a'  "remove whitespace from empty lines
+let @d = 'yyp:s/./-/g
+kddPj^' "underline with dashes
+let @e = 'yyp:s/./=/g
+kddPj^' "underline with equals signs
+let @w = 'ma:%s/^\s*$//g
+`a'  "remove whitespace from empty lines
 
 "******************************************************************************
 "plugins
